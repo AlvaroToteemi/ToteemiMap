@@ -4,7 +4,8 @@ export async function sendActivity(userId: string, points: number[][]) {
     const res = await fetch(`${API_URL}/activity`, {
         method: "POST",
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "ngrok-skip-browser-warning": "true"
         },
         body: JSON.stringify({ userId, points })
     })
@@ -17,7 +18,11 @@ export async function sendActivity(userId: string, points: number[][]) {
 }
 
 export async function fetchTerritories() {
-    const res = await fetch(`${API_URL}/territories`)
+    const res = await fetch(`${API_URL}/territories`, {
+        headers: {
+            "ngrok-skip-browser-warning": "true"
+        }
+    })
 
     if (!res.ok) {
         throw new Error("Error fetching territories")
