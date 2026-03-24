@@ -3,7 +3,7 @@ const { processActivity } = require("./activity.service")
 
 const router = express.Router()
 
-router.post("/api/activity", async (req, res) => {
+router.post("/activity", async (req, res) => {
     const { userId, points } = req.body
 
     if (!userId || !points) {

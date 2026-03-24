@@ -11,9 +11,9 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.use("/api/activity", activityRoutes)
-app.use("/api/territories", territoryRoutes)
-app.use("/api/users", userRoutes)
+app.use("/activity", activityRoutes)
+app.use("/territories", territoryRoutes)
+app.use("/users", userRoutes)
 
 
 module.exports = app
