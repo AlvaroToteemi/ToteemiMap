@@ -1,4 +1,4 @@
-const API_URL = " https://crunchiest-lydia-costlier.ngrok-free.dev"
+const API_URL = "https://crunchiest-lydia-costlier.ngrok-free.dev"
 
 export async function fetchUsers() {
     const res = await fetch(`${API_URL}/users`)
